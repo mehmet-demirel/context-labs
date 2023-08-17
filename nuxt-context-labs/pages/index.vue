@@ -20,6 +20,7 @@
                     the filtered array object to populate ClientCardList.vue </p>
             </div>
             <div class="home-page__right-col">
+                <h2>Clients</h2>
                 <input class="home-page__filter" v-model='filterInput' @input="filterList" placeholder="Filter" />
                 <ClientCardList :clients="clients" />
             </div>
@@ -64,11 +65,13 @@ const clients = computed(() => {
         gap: 24px;
     }
 
-    &__right-col {}
+    &__right-col h2 {
+        margin-top: 0
+    }
 
     &__filter {
         margin-bottom: 8px;
-        padding: 4px;
+        padding: 8px;
         width: 100%;
     }
 
